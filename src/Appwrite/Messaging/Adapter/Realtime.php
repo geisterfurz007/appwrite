@@ -150,7 +150,7 @@ class Realtime extends Adapter
                 'events' => $events,
                 'channels' => $channels,
                 'timestamp' => DateTime::now(),
-                'payload' => $payload
+                'payload' => count($payload) === 0 ? new stdclass() : $payload
             ]
         ]));
     }
